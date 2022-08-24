@@ -1,0 +1,837 @@
+{
+	"info": {
+		"_postman_id": "c7cc45ab-b87d-4128-9ed9-2a6f771a95ca",
+		"name": "Tickitz",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21564590"
+	},
+	"item": [
+		{
+			"name": "Movies",
+			"item": [
+				{
+					"name": "Get All Movie",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "4",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "title",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/v1/movies/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"movies",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Movie By Id From Body",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "Tenet",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/v1/movies/id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"movies",
+								"id"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "Tenet",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add New Movie From Body",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Pocong",
+									"type": "text"
+								},
+								{
+									"key": "cover",
+									"value": "Makmum.jpg",
+									"type": "text"
+								},
+								{
+									"key": "release_date",
+									"value": "2022-10-31",
+									"type": "text"
+								},
+								{
+									"key": "director",
+									"value": "Adam Husain",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Makmum Film Horror",
+									"type": "text"
+								},
+								{
+									"key": "casts",
+									"value": "Abu,Abi,Abe,Abo",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "Adventure,Horror",
+									"type": "text"
+								},
+								{
+									"key": "duration_hours",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "duration_minute",
+									"value": "12",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/v1/movies/?title=\"Makmum\"&cover=\"Makmum.jpg\"&release_date=\"2022-10-31\"&director=\"Adam Husain\"&description=\"Makmum Film Horror\"&casts=\"Abu,Abi,Abe,Abo\"&category=Adventure,Horror&duration_hours=1&duration_minute=12",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"movies",
+								""
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "\"Makmum\""
+								},
+								{
+									"key": "cover",
+									"value": "\"Makmum.jpg\""
+								},
+								{
+									"key": "release_date",
+									"value": "\"2022-10-31\""
+								},
+								{
+									"key": "director",
+									"value": "\"Adam Husain\""
+								},
+								{
+									"key": "description",
+									"value": "\"Makmum Film Horror\""
+								},
+								{
+									"key": "casts",
+									"value": "\"Abu,Abi,Abe,Abo\""
+								},
+								{
+									"key": "category",
+									"value": "Adventure,Horror"
+								},
+								{
+									"key": "duration_hours",
+									"value": "1"
+								},
+								{
+									"key": "duration_minute",
+									"value": "12"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Movie By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "6",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/v1/movies/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"movies",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Movie Title by id Form Data",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "\"Tenet\"",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/v1/movies/?id=5&title=Tenet",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"movies",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "5"
+								},
+								{
+									"key": "title",
+									"value": "Tenet"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Scheduled",
+			"item": [
+				{
+					"name": "Get All Scheduled",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "TeNEt",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/v1/scheduled/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"scheduled",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Scheduled By Id From Body",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "Tenet",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/v1/scheduled/id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"scheduled",
+								"id"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "Tenet",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add New Scheduled From Body",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "movie_id",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "cinema_id",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "studio_id",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "movie_title",
+									"value": "Doraemon",
+									"type": "text"
+								},
+								{
+									"key": "movie_cover",
+									"value": "Doraemon.Jpg",
+									"type": "text"
+								},
+								{
+									"key": "cinema_name",
+									"value": "Netflix",
+									"type": "text"
+								},
+								{
+									"key": "scheduled_price_min",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "scheduled_price_max",
+									"value": "15",
+									"type": "text"
+								},
+								{
+									"key": "scheduled_date_start",
+									"value": "2023-05-27",
+									"type": "text"
+								},
+								{
+									"key": "scheduled_date_end",
+									"value": "2023-11-27",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/v1/scheduled/?cover=\"Kapal Spiderman.jpg\"&title=\"Kapal Spiderman\"&location=\"2022-10-31\"&price=10&cinema=\"XXI,IFLIX,NETFLIX\"&time=\"14:30,20:30.21:40\"&date_start=2022-01-20&date_end=2022-10-20",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"scheduled",
+								""
+							],
+							"query": [
+								{
+									"key": "cover",
+									"value": "\"Kapal Spiderman.jpg\""
+								},
+								{
+									"key": "title",
+									"value": "\"Kapal Spiderman\""
+								},
+								{
+									"key": "location",
+									"value": "\"2022-10-31\""
+								},
+								{
+									"key": "price",
+									"value": "10"
+								},
+								{
+									"key": "cinema",
+									"value": "\"XXI,IFLIX,NETFLIX\""
+								},
+								{
+									"key": "time",
+									"value": "\"14:30,20:30.21:40\""
+								},
+								{
+									"key": "date_start",
+									"value": "2022-01-20"
+								},
+								{
+									"key": "date_end",
+									"value": "2022-10-20"
+								},
+								{
+									"key": "duration_minute",
+									"value": "12",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Scheduled By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "scheduled_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/v1/scheduled/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"scheduled",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Scheduled Title by id PARAMS",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "scheduled_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "movie_title",
+									"value": "\"Venom\"",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/v1/scheduled",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"scheduled"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Booking",
+			"item": [
+				{
+					"name": "Get All Booking",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "TeNEt",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/v1/booking/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"booking",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Booking By Id From Body",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "booking_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/v1/booking/id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"booking",
+								"id"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "Tenet",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add New Booking From Body",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "booking_code",
+									"value": "BC123",
+									"type": "text"
+								},
+								{
+									"key": "scheduled_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "profile_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "movie_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "movie_title",
+									"value": "Spiderman",
+									"type": "text"
+								},
+								{
+									"key": "cinema_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "cinema_name",
+									"value": "NETFLIX",
+									"type": "text"
+								},
+								{
+									"key": "cinema_city",
+									"value": "Jakarta",
+									"type": "text"
+								},
+								{
+									"key": "cinema_address",
+									"value": "Jakarta Barat",
+									"type": "text"
+								},
+								{
+									"key": "studio_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "studio_price",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "booking_date",
+									"value": "2022-10-15",
+									"type": "text"
+								},
+								{
+									"key": "payment_status",
+									"value": "Success",
+									"type": "text"
+								},
+								{
+									"key": "seat_booked",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "booking_status",
+									"value": "NOT FINISHED",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/v1/booking/?title=Kapal Spiderman&date=2022-10-31&time=10:05:59&one_ticked_price=15&seat_choosed=A1,B2,B3,B4",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"booking",
+								""
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "Kapal Spiderman"
+								},
+								{
+									"key": "date",
+									"value": "2022-10-31"
+								},
+								{
+									"key": "time",
+									"value": "10:05:59"
+								},
+								{
+									"key": "one_ticked_price",
+									"value": "15"
+								},
+								{
+									"key": "seat_choosed",
+									"value": "A1,B2,B3,B4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Booking By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "booking_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/v1/booking/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"booking",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Booking Title by id PARAMS",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "booking_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "movie_title",
+									"value": "\"Batman\"",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/v1/booking/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"booking",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
