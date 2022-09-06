@@ -72,52 +72,88 @@ npm start / nodemon
 [img-Vickri]: https://avatars.githubusercontent.com/u/40363306?v=4
 
 Postman Documentation : https://documenter.getpostman.com/view/21564590/UzBsKR4v
----End Point :--- 
-- GET MOVIES -
+# End Point 
+- GET Movies
+  
 Url : localhost:3001/api/v1/movies/
+  
 PARAMS = limit,page
+  
 BODY = id,title,release_date
+  
 Method = GET
+  
 
-- Search Movies - 
+- Search Movies 
+  
 Url : localhost:3001/api/v1/movies/search
+  
 PARAMS = limit ,page
+  
 BODY = id,title,release_date
+  
 Method = GET
+  
 
 - Get Now Showing Movies
+  
 Url : localhost:3001/api/v1/movies/nowshowing/
+  
 PARAMS = limit, page
+  
 BODY = id,title,release_date
+  
 Method = GET
+  
 
 - Get Upcoming Movies
+  
 Url : localhost:3001/api/v1/movies/upcoming/
+  
 PARAMS = limit ,page
+  
 BODY =id,title,release_date
+  
 Method = GET
+  
 
 - Get Movie By Id
+  
 Url : localhost:3001/api/v1/movies/id/
+  
 PARAMS = id
+  
 Method = GET
+  
 
 - Add New Movie
+  
 Url : localhost:3001/api/v1/movies
+  
 Headers : Token
+  
 Body : title,release_date,director,casts,description,category,duration_hours,duration_minute,showing_date_start,showing_date_end,cover
+  
 Method : POST
 
 - Delete Movie By Id
+  
 Url : localhost:3001/api/v1/movies/
+  
 Headers : Token
+  
 Params : Id
+  
 Method : Delete
 
 - Update Movie By Id
+  
 Url : localhost:3001/api/v1/movies/id
+  
 Headers : Token
+  
 Params : id
+  
 Body : title,release_date,director,casts,description,category,duration_hours,duration_minute,showing_date_start,showing_date_end,cover
+  
 Method : PATCH
-
