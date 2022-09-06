@@ -72,7 +72,7 @@ npm start / nodemon
 [img-Vickri]: https://avatars.githubusercontent.com/u/40363306?v=4
 
 Postman Documentation : https://documenter.getpostman.com/view/21564590/UzBsKR4v
-End Point : 
+---End Point :--- 
 - GET MOVIES -
 Url : localhost:3001/api/v1/movies/
 PARAMS = limit,page
