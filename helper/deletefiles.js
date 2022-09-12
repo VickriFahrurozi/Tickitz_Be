@@ -25,5 +25,22 @@ const updatecover = (id) => {
 		}
 	});
 };
+const updateprofile = (id) => {
+	db.query(
+		`select profile_picture from profiles where profile_id = ${id}`,
+		(err, result) => {
+			if (err) {
+				console.log('error di db query');
+				return 0;
+			} else if (!result.length) {
+				console.log('Data Cover Tidak Ada , Tidak Ada Cover yang diganti');
+				return 0;
+			} else {
+				deletecover(`./uploads/${result[0].profile_picture}`);
+				return 1;
+			}
+		}
+	);
+};
 
-module.exports = { deletecover, updatecover };
+module.exports = { deletecover, updatecover, updateprofile };

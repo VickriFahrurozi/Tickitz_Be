@@ -29,7 +29,6 @@ const Auth = {
 
 	VerifyAuthUser: (req, res, next) => {
 		if (req.headers.token) {
-			console.log(req.body);
 			const token = req.headers.token;
 			jwt.verify(token, process.env.JWT_SECRET_KEY, function (err, decoded) {
 				if (err) {
@@ -37,6 +36,28 @@ const Auth = {
 						message: 'INVALID TOKEN',
 					});
 				} else if (decoded.id != req.headers.id) {
+					return res.status(404).send({
+						message: 'IT`S NOT YOUR ACCOUNT',
+					});
+				} else {
+					next();
+				}
+			});
+		} else {
+			return res.status(404).send({
+				message: 'PLEASE LOG IN FIRST',
+			});
+		}
+	},
+	VerifyProfile: (req, res, next) => {
+		if (req.headers.token) {
+			const token = req.headers.token;
+			jwt.verify(token, process.env.JWT_SECRET_KEY, function (err, decoded) {
+				if (err) {
+					return res.status(404).send({
+						message: 'INVALID TOKEN',
+					});
+				} else if (decoded.id != req.query.profile_id) {
 					return res.status(404).send({
 						message: 'IT`S NOT YOUR ACCOUNT',
 					});

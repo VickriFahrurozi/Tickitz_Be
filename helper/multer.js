@@ -16,7 +16,7 @@ const storage = multer.diskStorage({
 					});
 				} else if (!result.length) {
 					req.res.status(400).send({
-						message: 'Error , ID Not Found',
+						message: 'Error , ID Not Foundd',
 					});
 				} else {
 					const uniqueSuffix = Date.now();
@@ -34,5 +34,6 @@ const storage = multer.diskStorage({
 });
 
 const upload = multer({ storage: storage });
+
 
 module.exports = upload;
