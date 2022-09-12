@@ -10,7 +10,7 @@ const {
 	getNowShowingMovies,
 	getUpcomingMovies,
 	SearchMovies,
-} = require('../model/movies');
+} = require('../model/Movies');
 
 const { addCinema, getAllCinema } = require('../model/Cinema');
 const { addOrder, getOrderByID } = require('../model/Order');
