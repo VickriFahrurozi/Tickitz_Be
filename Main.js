@@ -6,7 +6,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 app.use(cors());
-port = 3001;
+port = process.env.PORT || 3001;
 const mysql = require('mysql');
 
 const bodyParser = require('body-parser');
