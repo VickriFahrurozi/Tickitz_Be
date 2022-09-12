@@ -59,7 +59,7 @@ module.exports = {
 								});
 							} else {
 								resolve({
-									message: 'Get All Movies Success',
+									message: 'Get Now Movies Success',
 									status: 200,
 									totalpage: totalpage,
 									totalRow: result.length,
